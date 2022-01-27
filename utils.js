@@ -1,3 +1,11 @@
 export function makeStatsString(headCount, middleCount, bottomCount) {
-    return `You have changed the head ${headCount} times, the body ${middleCount} times, and the pants ${bottomCount} times. And nobody can forget your character's classic catchphrases:`;
+    return `You clicked on the head ${headCount} ${timesOrTime(headCount)}, on the middle ${middleCount} ${timesOrTime(middleCount)}, and on the bottom ${bottomCount} ${timesOrTime(bottomCount)}. And everybody loves your character's catchphrases:`;
+}
+
+function timesOrTime(count) {
+    if (count === 1) {
+        return 'time';
+    } else {
+        return 'times';
+    }
 }
