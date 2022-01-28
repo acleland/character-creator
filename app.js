@@ -52,6 +52,7 @@ bottomDropdown.addEventListener('change', () => {
     // update the dom for the bottom (NOTE use style.backgroundImage on the bottomEl div instead of trying to set the .src -- it's NOT an img tag!)
     bottomEl.style.backgroundImage = `url('./assets/${bottomValue}-pants.png')`;
     // update the stats to show the new count (refactor to/call displayStats() to do this work)
+    displayStats();
 });
 
 catchphraseButton.addEventListener('click', () => {
@@ -67,7 +68,7 @@ catchphraseButton.addEventListener('click', () => {
 });
 
 function displayStats() {
-    // change the text contentof the reportEl to tell the user how many times they've changed each piece of the state
+    // change the text content of the reportEl to tell the user how many times they've changed each piece of the state
     const statsString = makeStatsString(headCount, middleCount, bottomCount); // call this function with the correct arguments
     report.innerText = statsString;
 }
