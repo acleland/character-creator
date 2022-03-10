@@ -95,7 +95,7 @@ footer {
 main {
     display: flex;
     background-color: white;
-    margin: 0 auto;
+    margin: auto;
     width: 100%;
     max-width: 800px;
     justify-content: center;
